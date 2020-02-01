@@ -15,10 +15,11 @@ public class NotesActivity extends AppCompatActivity {
     private SharedPreferences myNoteSharedPref;
     private static String NOTE_TEXT = "note_text";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_notes);
         initViews();
         getDateFromSharedPref();
     }
