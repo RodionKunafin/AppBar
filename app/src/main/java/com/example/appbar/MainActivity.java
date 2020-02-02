@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
-        startActivity(intentNotes);
+     
         if (id == R.id.action_open_notes) {
             Toast.makeText(MainActivity.this, "Открыть записную книжку", Toast.LENGTH_LONG).show();
+            Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
+            startActivity(intentNotes);
             return true;
         }
 
