@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-     
+
         if (id == R.id.action_open_notes) {
             Toast.makeText(MainActivity.this, "Открыть записную книжку", Toast.LENGTH_LONG).show();
             Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
@@ -41,10 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (id==R.id.action_settings){
             Toast.makeText(MainActivity.this,"Открыть настройки",Toast.LENGTH_LONG).show();
+            Intent intentSettings = new Intent(android.provider.Settings.ACTION_SETTINGS);
+            startActivity(intentSettings);
         }
-        Intent intentSettings = new Intent(android.provider.Settings.ACTION_SETTINGS);
-        startActivity(intentSettings);
-
         return super.onOptionsItemSelected(item);
 
 
