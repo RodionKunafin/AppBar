@@ -29,16 +29,20 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
-        startActivity(intentNotes);
-
 
         int id = item.getItemId();
-
+        Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
+        startActivity(intentNotes);
         if (id == R.id.action_open_notes) {
             Toast.makeText(MainActivity.this, "Открыть записную книжку", Toast.LENGTH_LONG).show();
             return true;
         }
+
+        if (id==R.id.action_settings){
+            Toast.makeText(MainActivity.this,"Открыть настройки",Toast.LENGTH_LONG).show();
+        }
+        Intent intentSettings = new Intent(android.provider.Settings.ACTION_SETTINGS);
+        startActivity(intentSettings);
 
         return super.onOptionsItemSelected(item);
 
